@@ -1,7 +1,4 @@
-#(©)CodeXBotz
-
-
-
+#(©)AnimeCodeHub
 
 import os
 import asyncio
