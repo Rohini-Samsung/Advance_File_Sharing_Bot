@@ -12,26 +12,26 @@ from logging.handlers import RotatingFileHandler
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6253669210:AAGiUM6kodf9CPuIEXnCpkJ6geJRuwpRQhw")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "27465363"))
+APP_ID = int(os.environ.get("APP_ID", "29159952"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "ab1f1342001710875db59dfc6a77749f")
+API_HASH = os.environ.get("API_HASH", "0b3d81951f800917a8c2c7719d8f3857")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001534956289"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001776865411"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "5799637320"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6335120725"))
 
 #Port
 PORT = os.environ.get("PORT", "9001")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://peerzadasuhaib352:Xsk4gVMajYhK4mwf@cluster0.mo4v2lv.mongodb.net/?retryWrites=true&w=majority")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://oceanbot:ocean@cluster0.hwz6gjp.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001387951837"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001940711750"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -39,7 +39,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "<b>👋 ʜɪ {first} </b>, <b> ɪᴄʜɪɢᴏ ʜᴇʀᴇ ✦ , </b> \n кєєρ ωαт¢нιиg 🍿 \n кєєρ ѕυρρσятιиg 🙋🏻‍♀️ ")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5687950438 1277025786 597515629 1949894745 5606837601 1068449033 1501687881 6015466432").split()):
+    for x in (os.environ.get("ADMINS", "6335120725").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -63,7 +63,7 @@ BOT_STATS_TEXT = "<b>⚡ My today work hours are </b>\n{uptime} \n Ocean forever
 USER_REPLY_TEXT = "<b> <a href='tg://settings/'>click here.. Hi \n Tap on \help or \start for any issue ⚡   </b> "
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(5799637320)
+ADMINS.append(6335120725)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
