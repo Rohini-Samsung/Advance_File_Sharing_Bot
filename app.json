@@ -4,9 +4,10 @@
   "keywords": [
     "telegram",
     "file",
-    "sharing"
+    "sharing",
+    "AnimeCodeHub"
   ],
-  "repository": "https://github.com/skykawai/vega",
+  "repository": "https://github.com/AnimeCodeHub/Advance_File_Sharing_Bot/",
   "logo": "https://ibb.co/rm6q67F",
   "env": {
     "TG_BOT_TOKEN": {
