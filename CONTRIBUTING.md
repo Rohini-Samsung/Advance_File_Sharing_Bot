@@ -1,5 +1,4 @@
-# Contributing to FILE-SHARING-BOT
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+# Contributing to ADVANCE_FILE_SHARING_BOT
 
 - Reporting a bug
 - Discussing the current state of the code
@@ -15,8 +14,8 @@ We use github to host code, to track issues and feature requests, as well as acc
 4. Issue that pull request! (develop branch)
 
 ## Any contributions you make will be under the GNU General Public License v3.0
-In short, when you submit code changes, your submissions are understood to be under the same [GNU General Public License v3.0](https://github.com/CodeXBotz/File-Sharing-Bot/blob/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
+In short, when you submit code changes, your submissions are understood to be under the same [GNU General Public License v3.0](https://github.com/AnimeCodeHub/Advance_File_Sharing_Bot/main/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report bugs using Github's [issues](https://github.com/CodeXBotz/File-Sharing-Bot/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/CodeXBotz/File-Sharing-Bot/issues); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/AnimeCodeHub/Advance_File_Sharing_Bot/issues); it's that easy!
 
