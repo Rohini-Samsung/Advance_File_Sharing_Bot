@@ -46,11 +46,11 @@ class Bot(Client):
                        link = (await self.get_chat(channel_id)).invite_link
                        self.invitelinks[channel_id] = link
                except Exception as a:
-            self.LOGGER(__name__).warning(a)
-            self.LOGGER(__name__).warning(f"Bot can't Export Invite link from Force Sub Channel {channel_id}!")
-            self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNELS value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {channel_id}")
-            self.LOGGER(__name__).info("\nBot Stopped. ")
-            sys.exit()
+                   self.LOGGER(__name__).warning(a)
+                   self.LOGGER(__name__).warning(f"Bot can't Export Invite link from Force Sub Channel {channel_id}!")
+                   self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNELS value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {channel_id}")
+                   self.LOGGER(__name__).info("\nBot Stopped. ")
+                   sys.exit()
 
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
