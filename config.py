@@ -43,14 +43,10 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
        # print(f"Invalid channel ID: {channel}")
 
 #FORCE_SUB_CHANNELS = [-abs(channel) for channel in FORCE_SUB_CHANNELS]
-FORCE_SUB_CHANNELS = []
-channels = os.environ.get("FORCE_SUB_CHANNELS", "-1001940711750 -1001952741671").split()
-for channel in channels:
-    try:
-        channel_id = int(channel)
-        FORCE_SUB_CHANNELS.append(channel_id)
-    except ValueError:
-        print(f"Invalid channel ID: {channel}")
+
+
+FORCE_SUB_CHANNELS = [int(channel_id) for channel_id in os.environ.get("FORCE_SUB_CHANNELS", "-1001952741671").split()]
+
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
