@@ -10,34 +10,11 @@ import sys
 from datetime import datetime
 
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNELS, CHANNEL_ID, PORT
-#from giphy_client.giphy_client import DefaultApi
-
-#import random
-
-#from config import GIPHY_API_KEY
-#giphy = DefaultApi(api_key=GIPHY_API_KEY)
-
-#@Client.on_message(filters.command('hug'))
-#async def hug_command_handler(client, message):
-    #try:
-
-        #Get a random "hug" GIF from Giphy
-
-        #response = giphy.gifs_search_get(GIPHY_API_KEY, 'hug')
-       # gifs = response.data
-       # gif = random.choice(gifs)
-
-        # Send the GIF to the user
-        #await client.send_animation(chat_id=message.chat.id, animation=gif.images.original.url)
-   # except ApiException as e:
-            #print("Exception when calling DefaultApi->gifs_search_get: %s\n" % e)
 
 name ="""
 
 Hmm?
 """
-
-
 class Bot(Client):
     def __init__(self):
         super().__init__(
