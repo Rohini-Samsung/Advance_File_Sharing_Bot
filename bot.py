@@ -37,14 +37,14 @@ class Bot(Client):
         self.uptime = datetime.now()
 
         if FORCE_SUB_CHANNELS:
-    self.invitelinks = {}
+           self.invitelinks = {}
     for channel_id in FORCE_SUB_CHANNELS:
         try:
             link = (await self.get_chat(channel_id)).invite_link
             if not link:
                 await self.export_chat_invite_link(channel_id)
                 link = (await self.get_chat(channel_id)).invite_link
-            self.invitelinks[channel_id] = link
+                self.invitelinks[channel_id] = link
         except Exception as a:
             self.LOGGER(__name__).warning(a)
             self.LOGGER(__name__).warning(f"Bot can't Export Invite link from Force Sub Channel {channel_id}!")
