@@ -59,12 +59,12 @@ class Bot(Client):
 
 
 
-if FORCE_SUB_CHANNELS:
-    self.invitelink = []
-    for channel_id in FORCE_SUB_CHANNELS:
+        if FORCE_SUB_CHANNELS:
+             self.invitelink = []
+        for channel_id in FORCE_SUB_CHANNELS:
         try:
             link = (await self.get_chat(channel_id)).invite_link
-            if not link:
+        if not link:
                 await self.export_chat_invite_link(channel_id)
                 link = (await self.get_chat(channel_id)).invite_link
             self.invitelink.append(link)
