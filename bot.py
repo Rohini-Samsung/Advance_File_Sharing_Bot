@@ -59,7 +59,7 @@ class Bot(Client):
 
 
 
-        if FORCE_SUB_CHANNELS:
+if FORCE_SUB_CHANNELS:
     self.invitelink = []
     for channel_id in FORCE_SUB_CHANNELS:
         try:
