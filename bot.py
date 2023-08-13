@@ -57,7 +57,7 @@ class Bot(Client):
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
 
-        if FORCE_SUB_CHANNELSS:
+        if FORCE_SUB_CHANNELS:
             try:
                 link = (await self.get_chat(FORCE_SUB_CHANNELS)).invite_link
                 if not link:
