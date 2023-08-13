@@ -17,7 +17,7 @@ async def web_server():
 async def hug_command_handler(client, message):
     try:
         # Get the absolute path to the image file on your VPS
-        file_path = '/home/admin/gagan/kdbot/images/imagelol.jpg'
+        file_path = '/workspaces/Advance_File_Sharing_Bot/images/imagelol.jpg'
         
         # Check if the file exists
         if os.path.exists(file_path):
