@@ -42,6 +42,8 @@ for channel in channels:
     except ValueError:
         print(f"Invalid channel ID: {channel}")
 
+FORCE_SUB_CHANNELS = tuple(FORCE_SUB_CHANNELS)
+
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
