@@ -5,7 +5,7 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNELSS, ADMINS
+from config import FORCE_SUB_CHANNELS, ADMINS
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 
