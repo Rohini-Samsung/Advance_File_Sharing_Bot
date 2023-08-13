@@ -38,7 +38,6 @@ try:
 except ValueError:
     FORCE_SUB_CHANNELS = []
 
-
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
