@@ -15,6 +15,8 @@ name ="""
 
 Hmm?
 """
+
+
 class Bot(Client):
     def __init__(self):
         super().__init__(
@@ -34,24 +36,19 @@ class Bot(Client):
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
 
-
-
-        if FORCE_SUB_CHANNELS:
-             self.invitelink = []
-           for channel_id in FORCE_SUB_CHANNELS:
-        try:
-            link = (await self.get_chat(channel_id)).invite_link
-        if not link:
-                await self.export_chat_invite_link(channel_id)
-                link = (await self.get_chat(channel_id)).invite_link
-            self.invitelink.append(link)
-        except Exception as a:
-            self.LOGGER(__name__).warning(a)
-            self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
-            self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNELS value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {channel_id}")
-            self.LOGGER(__name__).info("\nBot Stopped. ")
-            sys.exit()
-
+        if FORCE_SUB_CHANNEL:
+            try:
+                link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
+                if not link:
+                    await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
+                    link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
+                self.invitelink = link
+            except Exception as a:
+                self.LOGGER(__name__).warning(a)
+                self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
+                self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
+                self.LOGGER(__name__).info("\nBot Stopped. ")
+                sys.exit()
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
             self.db_channel = db_channel
