@@ -33,7 +33,12 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 #force sub channel id, if you want enable force sub
 #FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001940711750"))
 # Force sub channel ids, if you want to enable force sub
-FORCE_SUB_CHANNELS = [int(channel_id) for channel_id in os.environ.get("FORCE_SUB_CHANNELS", "-1001940711750,-1001952741671").split(",")]
+try:
+    FORCE_SUB_CHANNELS=[]
+    for x in (os.environ.get("FORCE_SUB_CHANNELS", "-1001940711750,-1001952741671").split(",")):
+        FORCE_SUB_CHANNELS.append(int(x))
+except ValueError:
+        raise Exception("Your Admins list does not contain valid integers.")
 
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
