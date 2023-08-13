@@ -42,7 +42,7 @@ for channel in channels:
     except ValueError:
         print(f"Invalid channel ID: {channel}")
 
-FORCE_SUB_CHANNELS = list(map(int, FORCE_SUB_CHANNELS))
+FORCE_SUB_CHANNELS = [-abs(channel) for channel in FORCE_SUB_CHANNELS]
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
