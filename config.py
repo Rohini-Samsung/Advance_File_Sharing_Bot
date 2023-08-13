@@ -35,8 +35,8 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 # Force sub channel ids, if you want to enable force sub
 try:
     FORCE_SUB_CHANNELS=[]
-    for x in (os.environ.get("FORCE_SUB_CHANNELS", "-1001940711750,-1001952741671").split(",")):
-        FORCE_SUB_CHANNELS.append(int(x))
+    for y in (os.environ.get("FORCE_SUB_CHANNELS", "-1001940711750,-1001952741671").split(",")):
+        FORCE_SUB_CHANNELS.append(int(y))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
